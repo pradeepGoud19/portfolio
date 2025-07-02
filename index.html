@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Pradeep Kumar Bollepalli, Cloud and DevOps Engineer.">
+    <meta name="keywords" content="DevOps, Cloud Engineer, AWS, Azure, Kubernetes, Terraform, CI/CD">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <title>Pradeep Kumar Bollepalli - Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" onerror="console.error('Failed to load Tailwind CSS');">
+    <style>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f9fafb;
+            color: #1f2937;
+            margin: 0;
+            overflow-x: visible;
+        }
+        .section {
+            min-height: 80vh;
+            padding: 4rem 1rem;
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+        .hero {
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: left;
+            min-height: 100vh;
+        }
+        .hero-content {
+            display: flex;
+            align-items: center;
+            max-width: 80rem;
+            gap: 2rem;
+            padding: 1rem;
+        }
+        .hero-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            opacity: 1;
+            transform: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+        .skill-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 1.5rem;
+        }
+        .skill-card {
+            background: #e5e7eb;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 500;
+            opacity: 1;
+            transform: none;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        .skill-card:hover {
+            transform: scale(1.05);
+            background: #dbeafe;
+        }
+        .navbar {
+            background: rgba(17, 24, 39, 0.95);
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+        .navbar a {
+            color: white;
+            padding: 1rem 1.5rem;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+        .navbar a:hover, .navbar a:focus {
+            background: #2563eb;
+            border-radius: 8px;
+            outline: none;
+        }
+        .contact-link {
+            transition: color 0.3s ease;
+        }
+        .contact-link:hover, .contact-link:focus {
+            color: #2563eb;
+            outline: none;
+        }
+        .certification-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .certification-logo {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+        .certification-logo:hover {
+            transform: scale(1.1);
+        }
+        @media (max-width: 640px) {
+            .navbar {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .navbar a {
+                padding: 0.75rem 1rem;
+            }
+            .section {
+                padding: 2rem 1rem;
+            }
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-image {
+                width: 150px;
+                height: 150px;
+            }
+            .certification-item {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar flex justify-center space-x-2" role="navigation" aria-label="Main navigation">
+        <a href="#home" aria-label="Home">Home</a>
+        <a href="#about" aria-label="About">About</a>
+        <a href="#skills" aria-label="Skills">Skills</a>
+        <a href="#experience" aria-label="Experience">Experience</a>
+        <a href="#certifications" aria-label="Certifications">Certifications</a>
+        <a href="#contact" aria-label="Contact">Contact</a>
+    </nav>
+
+    <section id="home" class="hero section" role="banner">
+        <div class="hero-content">
+            <img src="https://via.placeholder.com/200" alt="Pradeep Kumar Bollepalli Profile" class="hero-image">
+            <div>
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">Pradeep Kumar Bollepalli</h1>
+                <p class="text-lg md:text-2xl mb-6">Cloud & DevOps Engineer</p>
+                <a href="#contact" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-blue-100 transition inline-block" aria-label="Contact me">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section bg-gray-50" aria-labelledby="about-heading">
+        <h2 id="about-heading" class="text-4xl font-bold mb-8 text-center">About Me</h2>
+        <div class="card max-w-4xl mx-auto">
+            <p class="text-lg">Cloud and DevOps Engineer with 8 years of experience architecting and automating infrastructure on AWS and Azure for scalable solutions. I specialize in Terraform, CloudFormation, and ARM Templates to build reliable cloud environments for high-performance applications. Proficient in Kubernetes (EKS, AKS) with Helm and ArgoCD, I orchestrate containerized workloads for seamless deployments. I develop CI/CD pipelines using Jenkins, Azure DevOps, and GitLab CI to ensure efficient software delivery. I implement real-time, event-driven systems with Lambda, Fargate, Step Functions, and Kafka. Ensuring HIPAA and SOC 2 compliance, I leverage Prometheus, Grafana, ELK, and Datadog for observability, mentoring teams to deliver production-ready solutions with disaster recovery automation and SRE best practices.</p>
+            <ul class="list-disc mt-4 ml-6 text-lg">
+                <li>Automated provisioning of AKS clusters using modular Terraform.</li>
+                <li>Designed secure multi-account AWS landing zones with IAM boundaries.</li>
+                <li>Built CI/CD pipelines with SonarQube, Trivy, and Nexus integration.</li>
+                <li>Engineered real-time Kafka-based ingestion pipelines with AWS Lambda.</li>
+                <li>Spearheaded disaster recovery automation for Kubernetes workloads.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="skills" class="section" aria-labelledby="skills-heading">
+        <h2 id="skills-heading" class="text-4xl font-bold mb-8 text-center">Skills</h2>
+        <div class="skill-grid max-w-5xl mx-auto">
+            <div class="skill-card">AWS (EKS, ECS, Lambda)</div>
+            <div class="skill-card">Azure (AKS, Monitor, Key Vault)</div>
+            <div class="skill-card">Terraform</div>
+            <div class="skill-card">CloudFormation</div>
+            <div class="skill-card">ARM Templates</div>
+            <div class="skill-card">Kubernetes</div>
+            <div class="skill-card">Helm</div>
+            <div class="skill-card">ArgoCD</div>
+            <div class="skill-card">Jenkins</div>
+            <div class="skill-card">Azure DevOps</div>
+            <div class="skill-card">GitLab CI</div>
+            <div class="skill-card">Prometheus</div>
+            <div class="skill-card">Grafana</div>
+            <div class="skill-card">ELK Stack</div>
+            <div class="skill-card">Datadog</div>
+            <div class="skill-card">Docker</div>
+            <div class="skill-card">Python</div>
+            <div class="skill-card">Bash</div>
+            <div class="skill-card">PowerShell</div>
+            <div class="skill-card">Kafka (MSK)</div>
+            <div class="skill-card">Ansible</div>
+            <div class="skill-card">Chef</div>
+            <div class="skill-card">Puppet</div>
+        </div>
+    </section>
+
+    <section id="experience" class="section bg-gray-50" aria-labelledby="experience-heading">
+        <h2 id="experience-heading" class="text-4xl font-bold mb-8 text-center">Professional Experience</h2>
+        <div class="max-w-4xl mx-auto">
+            <div class="card">
+                <h3 class="text-2xl font-semibold">DevOps Engineer, ADP</h3>
+                <p class="text-gray-600">Mar 2024 - Present</p>
+                <p class="mt-2"><strong>Project:</strong> Scaling and Automation for French Application Environments</p>
+                <ul class="list-disc ml-6 mt-2 text-base">
+                    <li>Designed scalable AWS infrastructure using EKS, ECS, and automated provisioning with Terraform and CloudFormation.</li>
+                    <li>Developed CI/CD pipelines with Jenkins, CodePipeline, and SonarQube for code quality.</li>
+                    <li>Implemented monitoring with Prometheus, Grafana, and ELK Stack for real-time insights.</li>
+                    <li>Optimized DynamoDB Streams and Kafka (MSK) for event-driven architectures.</li>
+                    <li>Secured environments with IAM, KMS, and AWS Config for compliance.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3 class="text-2xl font-semibold">SRE Engineer, CSL</h3>
+                <p class="text-gray-600">Dates Not Specified</p>
+                <p class="mt-2"><strong>Project:</strong> Safely Donate Transaction System</p>
+                <ul class="list-disc ml-6 mt-2 text-base">
+                    <li>Ensured production reliability with Azure AKS and monitored SLOs using Azure Monitor.</li>
+                    <li>Implemented serverless workflows with Azure Functions and secured systems with Azure Key Vault.</li>
+                    <li>Developed PowerShell scripts for automated incident response.</li>
+                    <li>Configured Logstash and Azure Service Bus for real-time transaction processing.</li>
+                    <li>Automated disaster recovery with Azure Site Recovery and documented procedures.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3 class="text-2xl font-semibold">Cloud DevOps Engineer, Old National Bank</h3>
+                <p class="text-gray-600">Apr 2021 - Dec 2022</p>
+                <p class="mt-2"><strong>Project:</strong> Personal Checking CloudSync Platform</p>
+                <ul class="list-disc ml-6 mt-2 text-base">
+                    <li>Designed AWS ECS infrastructure and serverless architectures with Lambda.</li>
+                    <li>Leveraged AWS Kinesis for real-time transaction analytics.</li>
+                    <li>Conducted security audits with AWS Inspector and optimized S3 buckets.</li>
+                    <li>Integrated AWS Step Functions for microservices orchestration.</li>
+                    <li>Developed Python scripts for compliance checks and automated testing with AWS CodeBuild.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3 class="text-2xl font-semibold">DevOps Engineer, Comcast</h3>
+                <p class="text-gray-600">Nov 2018 - Mar 2021</p>
+                <p class="mt-2"><strong>Project:</strong> Secure and Scalable DevOps Ecosystem for Microservices Deployment</p>
+                <ul class="list-disc ml-6 mt-2 text-base">
+                    <li>Created Helm charts and RBAC policies for Kubernetes deployments.</li>
+                    <li>Configured Prometheus and Alertmanager with PagerDuty for monitoring.</li>
+                    <li>Enabled blue/green deployments and migrated legacy systems to containers.</li>
+                    <li>Optimized Docker images and integrated Trivy for security scanning.</li>
+                    <li>Conducted chaos engineering tests for production resilience.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3 class="text-2xl font-semibold">Build and Release Engineer, HCL</h3>
+                <p class="text-gray-600">Aug 2016 - Oct 2018</p>
+                <p class="mt-2"><strong>Project:</strong> Automated Cloud Provisioning and Release Orchestration</p>
+                <ul class="list-disc ml-6 mt-2 text-base">
+                    <li>Designed Jenkins CI pipelines for .NET applications with unit testing.</li>
+                    <li>Containerized legacy apps with Docker and authored ARM templates for Azure.</li>
+                    <li>Configured Splunk for logging and Gradle for build automation.</li>
+                    <li>Automated server health checks with PowerShell scripts.</li>
+                    <li>Documented CI/CD workflows for improved onboarding.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications" class="section" aria-labelledby="certifications-heading">
+        <h2 id="certifications-heading" class="text-4xl font-bold mb-8 text-center">Certifications</h2>
+        <div class="card max-w-4xl mx-auto">
+            <ul class="list-disc ml-6 text-lg">
+                <li class="certification-item">
+                    <img src="aws-badge.png" alt="AWS Certified Solutions Architect – Associate Logo" class="certification-logo" onerror="this.style.display='none'; this.nextElementSibling.style.marginLeft='0';">
+                    <span>AWS Certified Solutions Architect – Associate (2023)</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact" class="section bg-gray-100" aria-labelledby="contact-heading">
+        <h2 id="contact-heading" class="text-4xl font-bold mb-8 text-center">Contact</h2>
+        <div class="card max-w-4xl mx-auto">
+            <p class="mb-2">Email: <a href="mailto:pradeepkumarbollepalli19@gmail.com" class="contact-link" aria-label="Email Pradeep">pradeepkumarbollepalli19@gmail.com</a></p>
+            <p class="mb-2">Phone: <a href="tel:+16783048776" class="contact-link" aria-label="Call Pradeep">+1 (678) 304-8776</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/pradeepkumarbollepalli" target="_blank" class="contact-link" aria-label="Visit Pradeep's LinkedIn">linkedin.com/in/pradeepkumarbollepalli</a></p>
+        </div>
+    </section>
+
+    <!-- GSAP and ScrollTrigger CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" onerror="console.error('Failed to load GSAP');"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" onerror="console.error('Failed to load ScrollTrigger');"></script>
+    <script>
+        console.log('Script loaded');
+        if (typeof gsap === 'undefined') {
+            console.error('GSAP not loaded. Sections will still be visible.');
+        } else {
+            console.log('GSAP loaded successfully');
+            gsap.registerPlugin(ScrollTrigger);
+
+            // Hero section animation
+            gsap.from(".hero-image", { opacity: 0, x: -50, duration: 1, ease: "power3.out" });
+            gsap.from(".hero h1", { opacity: 0, x: 50, duration: 1, delay: 0.2, ease: "power3.out" });
+            gsap.from(".hero p", { opacity: 0, x: 50, duration: 1, delay: 0.4, ease: "power3.out" });
+            gsap.from(".hero a", { opacity: 0, scale: 0.7, duration: 1, delay: 0.6, ease: "back.out(1.7)" });
+
+            // Card animations
+            gsap.utils.toArray(".card").forEach(card => {
+                gsap.from(card, {
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 85%",
+                        toggleActions: "play none none none"
+                    },
+                    opacity: 0,
+                    y: 50,
+                    duration: 1,
+                    ease: "power3.out"
+                });
+            });
+
+            // Skill card animations
+            gsap.utils.toArray(".skill-card").forEach((skill, i) => {
+                gsap.from(skill, {
+                    scrollTrigger: {
+                        trigger: skill,
+                        start: "top 85%",
+                        toggleActions: "play none none none"
+                    },
+                    opacity: 0,
+                    scale: 0.8,
+                    duration: 0.6,
+                    delay: i * 0.1,
+                    ease: "back.out(1.7)"
+                });
+            });
+
+            // Certification logo animation
+            gsap.from(".certification-logo", {
+                scrollTrigger: {
+                    trigger: ".certification-logo",
+                    start: "top 85%",
+                    toggleActions: "play none none none"
+                },
+                opacity: 0,
+                scale: 0.8,
+                duration: 0.6,
+                ease: "back.out(1.7)"
+            });
+
+            // Navbar animation
+            gsap.from(".navbar a", {
+                opacity: 0,
+                y: -20,
+                stagger: 0.15,
+                duration: 0.6,
+                ease: "power3.out"
+            });
+        }
+
+        // Smooth scrolling for navbar links
+        document.querySelectorAll('.navbar a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
